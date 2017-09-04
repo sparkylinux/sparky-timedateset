@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Time and date
+Name[en]=Time and date
+Name[pl]=Czas i data
+Comment[en]=This lets you to change time and date
+Comment[pl]=Zmiana czasu i daty w systemie
+Exec=remsu "dpkg-reconfigure -f gnome tzdata"
+Icon=appointment-new
+Categories=System
+Terminal=False
+Type=Application
