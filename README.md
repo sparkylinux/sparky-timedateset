@@ -1,7 +1,7 @@
 Time and date
 This tool lets you change time and date.
 
-Copyright (C) 2013-2017 Paweł Pijanowski and others, see copyright file.
+Copyright (C) 2013-2018 Paweł Pijanowski and others, see copyright file.
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -21,6 +21,7 @@ Dependencies:
 dpkg
 tzdata
 sparky-remsu
+sparky-xterm
 
 Install:
 -------------
