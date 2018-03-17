@@ -1,0 +1,17 @@
+#!/bin/bash
+
+TESTROOT="`whoami`"
+if [ "$TESTROOT" != "root" ]; then
+	echo "Must be root...Exiting..."
+	exit 1
+fi
+
+if [ -f /usr/bin/sparky-terminal ]; then
+	SPARKYXTERM="sparky-terminal"
+else
+	SPARKYXTERM="x-terminal-emulator"
+fi
+
+$SPARKYXTERM -e "dpkg-reconfigure tzdata"
+
+exit 0

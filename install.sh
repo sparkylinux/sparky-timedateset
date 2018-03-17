@@ -18,6 +18,7 @@ if [ "$1" = "uninstall" ]; then
 	rm -f /usr/lib/sparkycenter/system/sparky-timedateset.desktop
 	rm -f /usr/share/applications/sparky-timedateset.desktop
 	rm -f /usr/share/menu/sparky-timedateset
+	rm -f /usr/bin/sparky-timedateset
 else
 	if [ ! -d /usr/lib/sparkycenter/system ]; then
 		mkdir -p /usr/lib/sparkycenter/system
@@ -25,4 +26,5 @@ else
 	cp share/sparky-timedateset.desktop /usr/lib/sparkycenter/system/
 	cp share/sparky-timedateset.desktop /usr/share/applications/
 	cp share/sparky-timedateset /usr/share/menu/
+	cp bin/* /usr/bin/
 fi
