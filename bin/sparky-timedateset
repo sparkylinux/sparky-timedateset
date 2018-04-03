@@ -2,16 +2,17 @@
 
 TESTROOT="`whoami`"
 if [ "$TESTROOT" != "root" ]; then
-	echo "Must be root...Exiting..."
+	echo "Must be root... Exiting..."
 	exit 1
 fi
 
-if [ -f /usr/bin/sparky-terminal ]; then
-	SPARKYXTERM="sparky-terminal"
+if [ -f /usr/bin/sparky-xterm ];then
+	SPARKYXTERM="/usr/bin/sparky-xterm"
 else
-	SPARKYXTERM="x-terminal-emulator"
+	echo "sparky-xterm is missing... Exiting..."
+	exit 1
 fi
 
-$SPARKYXTERM -e "dpkg-reconfigure tzdata"
+$SPARKYXTERM "dpkg-reconfigure tzdata"
 
 exit 0
